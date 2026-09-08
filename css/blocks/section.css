@@ -1,0 +1,14 @@
+/* Shared section surface helpers */
+
+.section-sheet {
+  border-radius: var(--radius-section);
+  overflow: hidden;
+}
+
+.section-gap {
+  margin-bottom: var(--section-gap);
+}
+
+.section-bg-soft {
+  background: var(--color-bg-light);
+}

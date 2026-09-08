@@ -1,0 +1,26 @@
+/* Icon button */
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 12px; */
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 0.84px solid #353535;
+  color: var(--color-white);
+  transition: background-color var(--ease), color var(--ease);
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
+.icon-btn--accent {
+  background: var(--color-green-dark);
+  color: var(--color-white);
+}
+
+.icon-btn--accent:hover { background: var(--color-green-primary); }

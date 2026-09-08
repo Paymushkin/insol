@@ -1,0 +1,42 @@
+/* Underline field */
+
+.underline-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.underline-field__label {
+  font-size: 14px;
+  color: var(--color-gray-400);
+}
+
+.underline-field__input,
+.underline-field__select {
+  width: 100%;
+  padding: 8px 0 10px;
+  border: 0;
+  border-bottom: 1px solid var(--color-gray-100);
+  background: transparent;
+  border-radius: 0;
+  outline: none;
+}
+
+.underline-field__input:focus,
+.underline-field__select:focus {
+  border-bottom-color: var(--color-green-primary);
+}
+
+.underline-field__input.is-error,
+.underline-field__select.is-error {
+  border-bottom-color: var(--color-red-cta);
+  color: var(--color-red-cta);
+}
+
+.underline-field__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%23222222' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  padding-right: 20px;
+}

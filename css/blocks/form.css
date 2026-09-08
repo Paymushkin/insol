@@ -1,0 +1,91 @@
+/* Form */
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form__captcha {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 26px;
+}
+
+.form__captcha .field__control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form__captcha .field__control:focus {
+  border-color: transparent;
+  border-bottom-color: #fff;
+}
+
+.form__equation {
+  width: 220px;
+  min-width: 220px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--color-dark-surface);
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.form__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--color-text-on-dark);
+}
+
+.form__consent input {
+  appearance: none;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.form__consent input:checked {
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.2 6.6 11.3 12.5 4.7' stroke='%23ffffff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 12px 12px no-repeat;
+  border-color: var(--color-white);
+}
+
+.form__consent a { color: var(--color-green-primary); text-decoration: underline; }
+
+.form__submit {
+  min-height: 56px;
+  border-radius: 12px;
+  background: var(--color-white);
+  color: var(--color-text-dark);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.form__submit:hover { background: var(--color-bg-light); }
+
+@media (max-width: 1023px) {
+  .form__row { grid-template-columns: 1fr; }
+}

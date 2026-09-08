@@ -1,0 +1,16 @@
+{
+  "name": "insol-kubit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Чистая вёрстка INSOL KUBIT для последующей интеграции в 1С-Битрикс",
+  "scripts": {
+    "dev": "vite --host --port 3000 --open",
+    "start": "vite --host --port 3000",
+    "build": "vite build",
+    "build:pages": "GITHUB_PAGES=1 vite build",
+    "preview": "vite preview --host --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

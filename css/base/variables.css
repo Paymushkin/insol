@@ -1,0 +1,103 @@
+/* INSOL KUBIT — Design System 1.0
+   BEM. Токены из UI-kit. */
+
+:root {
+  --color-green-primary: #1fb184;
+  --color-green-accent: rgba(31, 177, 132, 0.5);
+  --color-green-dark: #3c7161;
+  --color-green-deep: #1c6b51;
+  --color-green-glow: rgba(64, 190, 91, 0.3);
+  --color-red-cta: #da4744;
+  --color-red-dark: #462322;
+  --color-black: #222;
+  --color-near-black: #010202;
+  --color-dark-bg: #151515;
+  --color-nav: #1b1b1b;
+  --color-dark-surface: #181a1b;
+  --color-dark-gray: #3d4241;
+  --color-gray-600: #616161;
+  --color-gray-400: #90949a;
+  --color-gray-300: #a9aeb2;
+  --color-gray-200: #c2c2c2;
+  --color-gray-150: #cacaca;
+  --color-gray-100: #d8d8d9;
+  --color-gray-50: #dcdfe8;
+  --color-bg-light: #ededed;
+  --color-white: #ffffff;
+  --color-text-dark: #222222;
+  --color-text-body: #a9aeb2;
+  --color-text-light: #cacaca;
+  --color-text-white: #ffffff;
+  --color-text-on-dark: #D9D9D9;
+  --color-success-bg: #e7f6ef;
+  --color-success: #1c6b51;
+  --color-error-bg: #f8e8e8;
+  --color-error: #da4744;
+  --color-warning-bg: #f8efd9;
+  --color-warning: #c47a12;
+  --color-info-bg: #e6f1f8;
+  --color-info: #2b6ea3;
+  --color-hero-dot: #462322;
+  --color-hero-dot-active: #da4744;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+
+  --radius-s: 8px;
+  --radius-m: 16px;
+  --radius-l: 20px;
+  --radius-xl: 32px;
+  --radius-section: 50px;
+  --radius-pill: 50px;
+  --radius-btn: 136px;
+
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --container: 1740px;
+  --container-hero: 1360px;
+  --gutter: 24px;
+  --page-pad: 90px;
+  --header-h: 96px;
+  --ease: 0.22s ease;
+  --section-gap: 20px;
+  --section-pad-y: var(--space-80);
+  --section-pad-y-mob: var(--space-40);
+}
+
+@media (max-width: 1919px) {
+  :root { --page-pad: 80px; }
+}
+
+@media (max-width: 1439px) {
+  :root { --page-pad: 64px; }
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --page-pad: 20px;
+    --header-h: 72px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --radius-section: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-pad: 20px;
+    --gutter: 16px;
+    --header-h: 64px;
+  }
+}

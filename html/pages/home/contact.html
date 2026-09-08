@@ -1,0 +1,69 @@
+    <section class="contact" id="contacts" aria-labelledby="contact-title" itemscope itemtype="https://schema.org/ContactPage">
+      <meta itemprop="name" content="Контакты INSOL KUBIT">
+      <div class="container contact__grid">
+        <div class="contact__content">
+          <p class="contact__label">Есть вопросы?</p>
+          <h2 class="title title--h2 contact__title" id="contact-title" itemprop="headline">Заказать демонстрацию</h2>
+          <p class="contact__text" itemprop="description">Если вас заинтересовало данное решение Вы можете задать нам любой интересующий вас вопрос в поле комментарий.</p>
+          <div class="contact__socials">
+            <a class="social" href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <!-- @include html/includes/icons/telegram-lg.html -->
+            </a>
+            <a class="social" href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+              <!-- @include html/includes/icons/vk.html -->
+            </a>
+            <a class="social" href="https://wa.me/74995028023" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <!-- @include html/includes/icons/whatsapp.html -->
+            </a>
+          </div>
+        </div>
+
+        <form class="form contact__form" action="#" method="post" data-form novalidate>
+          <div class="alerts" data-alerts></div>
+          <div class="form__row">
+            <label class="field">
+              <span class="visually-hidden">Имя</span>
+              <input class="field__control" type="text" name="name" placeholder="Имя" required autocomplete="name">
+            </label>
+            <label class="field">
+              <span class="visually-hidden">E-mail</span>
+              <input class="field__control" type="email" name="email" placeholder="E-mail" required autocomplete="email">
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="field">
+              <span class="visually-hidden">Номер телефона</span>
+              <input class="field__control" type="tel" name="phone" placeholder="Номер телефона" data-phone required autocomplete="tel">
+            </label>
+            <label class="field">
+              <span class="visually-hidden">Готовое решение</span>
+              <select class="field__select" name="solution" required>
+                <option value="">Готовое решение</option>
+                <option>Транспортно-Логистическая компания</option>
+                <option>Ремонт квартир под ключ</option>
+                <option>Строительная компания</option>
+                <option>Проектная компания</option>
+                <option>Мебельное производство</option>
+                <option>Продажа и производство дверей</option>
+                <option>Продажа и производство окон</option>
+                <option>Продажа и производство кухонь</option>
+                <option>Обслуживание газового оборудования</option>
+              </select>
+            </label>
+          </div>
+          <label class="field">
+            <span class="visually-hidden">Комментарий</span>
+            <textarea class="field__textarea" name="comment" placeholder="Комментарий"></textarea>
+          </label>
+          <div class="form__captcha">
+            <span class="form__equation">88 ÷ 8 =</span>
+            <input class="field__control" type="text" name="captcha" placeholder="Введите ответ" required inputmode="numeric">
+          </div>
+          <label class="form__consent">
+            <input type="checkbox" name="agree" required>
+            <span>Я соглашаюсь с <a href="#privacy">политикой в отношении обработки персональных данных</a></span>
+          </label>
+          <button class="btn btn--l btn--full form__submit" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </section>

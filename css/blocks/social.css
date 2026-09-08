@@ -1,0 +1,33 @@
+/* Social */
+
+.social {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--color-white);
+  transition: background-color var(--ease);
+}
+
+.social:hover { background: rgba(255, 255, 255, 0.08); }
+
+.social--light {
+  background: var(--color-bg-light);
+  border-color: var(--color-gray-100);
+  color: var(--color-text-dark);
+}
+
+.social svg {
+  display: block;
+  flex-shrink: 0;
+  color: inherit;
+  fill: currentColor;
+}
+
+.social svg [stroke] {
+  fill: none;
+  stroke: currentColor;
+}

@@ -1,0 +1,122 @@
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  z-index: 50;
+  background: var(--color-dark-bg);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  background: var(--color-nav);
+  border-radius: var(--radius-pill);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header__cta {
+  margin-left: 33px;
+}
+
+.header__burger {
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  color: var(--color-white);
+}
+
+.header__burger span {
+  position: absolute;
+  right: 8px;
+  display: block;
+  height: 2px;
+  background: currentColor;
+  border-radius: 99px;
+  transform-origin: center;
+  transition:
+    transform 0.28s ease,
+    top 0.28s ease,
+    width 0.28s ease,
+    opacity 0.28s ease;
+}
+
+.header__burger span:nth-child(1) {
+  top: 13px;
+  width: 12px;
+}
+
+.header__burger span:nth-child(2) {
+  top: 21px;
+  width: 19px;
+}
+
+.header__burger span:nth-child(3) {
+  top: 29px;
+  width: 24.5px;
+}
+
+.header__burger[aria-expanded="true"] span:nth-child(1),
+.header__burger[aria-expanded="true"] span:nth-child(3) {
+  top: 21px;
+  width: 26.5px;
+}
+
+.header__burger[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.header__burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__burger[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1279px) {
+  .header {
+    top: 0;
+    margin: 0;
+    padding: 16px 0;
+    background: transparent;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .header--scrolled {
+    background: var(--color-dark-bg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  .header:has(.header__burger[aria-expanded="true"]) {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .header__nav,
+  .header__actions { display: none; }
+
+  .header__inner { gap: 16px; }
+
+  .header__burger {
+    display: block;
+  }
+}

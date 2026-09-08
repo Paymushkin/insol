@@ -1,0 +1,71 @@
+/* Burger panel */
+
+.burger-panel {
+  display: none;
+}
+
+@media (max-width: 1279px) {
+  .burger-panel {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    padding: calc(var(--header-h) + 28px) var(--page-pad) 60px;
+    background:
+      url("/images/mobile-menu-bg.png") center / cover no-repeat,
+      var(--color-dark-bg);
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+    overflow: auto;
+  }
+
+  .burger-panel.is-open {
+    transform: translateX(0);
+  }
+
+  .burger-panel__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    padding: 30px 0;
+  }
+
+  .burger-panel__nav a {
+    display: block;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--color-white);
+  }
+
+  .burger-panel__nav a.is-active {
+    color: var(--color-white);
+  }
+
+  .burger-panel__footer {
+    display: grid;
+    gap: 32px;
+    margin-top: auto;
+    padding-top: 32px;
+  }
+
+  .burger-panel__icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .burger-panel__icons .icon-btn {
+    width: 53px;
+    height: 53px;
+  }
+
+  .burger-panel__cta {
+    width: 100%;
+    min-height: 56px;
+    border-radius: var(--radius-pill);
+  }
+}

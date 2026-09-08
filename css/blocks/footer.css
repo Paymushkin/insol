@@ -1,0 +1,383 @@
+/* Footer */
+
+.footer {
+  background: var(--color-white);
+  border-radius: var(--radius-section) var(--radius-section) 0 0;
+}
+
+.footer__sheet {
+  position: relative;
+  background: url("/images/footer-bg.png");
+  background-size: cover;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  border-radius: var(--radius-section) var(--radius-section) 0 0;
+  overflow: hidden;
+  background-blend-mode: color, normal;
+}
+
+.footer__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 40px 48px;
+  padding: 100px 0 76px;
+}
+
+.footer__cta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100%;
+}
+
+.footer__cta-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.footer__cta-btn {
+  margin-bottom: 375px;
+  width: 275px;
+  border-radius: var(--radius-pill);
+}
+
+.footer__phone {
+  display: inline-block;
+  margin-top: auto;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-dark);
+}
+
+.footer__nav {
+  display: none;
+}
+
+.footer__col-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+.footer__col-title a {
+  color: inherit;
+}
+
+.footer__col-title a:hover {
+  opacity: 0.7;
+}
+
+.footer__list {
+  display: grid;
+  gap: 12px;
+  max-width: 230px;
+}
+
+.footer__list a {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-dark);
+  opacity: 0.5;
+  transition: opacity var(--ease);
+}
+
+.footer__list a:hover {
+  opacity: 1;
+}
+
+.footer__cols {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.7fr) minmax(230px, 1.2fr) max-content;
+  grid-template-areas:
+    "mega solutions company"
+    "mega solutions contacts";
+  gap: 40px 130px;
+  align-items: start;
+}
+
+.footer__cols > :nth-child(1) { grid-area: mega; }
+.footer__cols > :nth-child(2) { grid-area: solutions; }
+.footer__cols > :nth-child(3) { grid-area: company; }
+.footer__cols > :nth-child(4) {
+  grid-area: contacts;
+  max-width: none;
+  width: max-content;
+}
+
+.footer__cols > :nth-child(3) .footer__list,
+.footer__cols > :nth-child(4) .footer__list {
+  max-width: none;
+}
+
+.footer__contacts {
+  display: grid;
+  gap: 16px;
+  max-width: none;
+}
+
+.footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__contact {
+  display: flex;
+  gap: 10px;
+  max-width: none;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--color-gray-600);
+}
+
+.footer__contact svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-gray-600);
+}
+
+.footer__contact a {
+  color: inherit;
+}
+
+.footer__contact a:hover {
+  color: var(--color-text-dark);
+}
+
+.footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.footer__socials .social--light {
+  width: 44px;
+  height: 44px;
+  background: var(--color-white);
+  border-color: var(--color-gray-100);
+}
+
+.footer__bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 30px 0;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--color-gray-400);
+}
+
+.footer__bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--color-gray-100);
+}
+
+.footer__copy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 53px;
+}
+
+.footer__bottom a {
+  color: inherit;
+}
+
+.footer__bottom a:hover {
+  color: var(--color-text-dark);
+}
+
+@media (max-width: 1279px) {
+  .footer__inner {
+    gap: 40px 32px;
+    padding-top: 48px;
+  }
+
+  .footer__cols {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "mega solutions"
+      "company contacts";
+    gap: 40px 32px;
+  }
+
+  .footer__phone {
+    padding-top: 32px;
+    font-size: 28px;
+  }
+
+  .footer__cta-btn {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer {
+    border-radius: var(--radius-section) var(--radius-section) 0 0;
+  }
+
+  .footer__sheet {
+    border-radius: var(--radius-section) var(--radius-section) 0 0;
+    background-image: url("/images/footer-bg-mob.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .footer__sheet > .container {
+    display: flex;
+    flex-direction: column;
+    padding: 60px var(--page-pad);
+  }
+
+  .footer__inner {
+    padding: 0;
+  }
+
+  .footer__inner,
+  .footer__cta,
+  .footer__cols,
+  .footer__cols > :nth-child(4),
+  .footer__contacts {
+    display: contents;
+  }
+
+  .footer__cta-title {
+    order: 1;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  .footer__cta-btn {
+    order: 2;
+    max-width: none;
+    margin-bottom: 0;
+    min-height: 56px;
+  }
+
+  .footer__nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 32px;
+  }
+
+  .footer__nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .footer__nav-link {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+    opacity: 0.9;
+  }
+
+  .footer__cols > :nth-child(1),
+  .footer__cols > :nth-child(2),
+  .footer__cols > :nth-child(3),
+  .footer__cols > :nth-child(4) .footer__col-title,
+  .footer__list {
+    display: none;
+  }
+
+  .footer__contact-list {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .footer__contact {
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .footer__socials {
+    order: 5;
+    gap: 12px;
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
+
+  .footer__socials .social--light {
+    width: 46px;
+    height: 46px;
+    background: transparent;
+  }
+
+  .footer__phone {
+    order: 6;
+    margin: 0;
+    padding-top: 0;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 0.9;
+  }
+
+  .footer__bottom {
+    order: 7;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 32px;
+    padding: 24px 0 0;
+    font-size: 14px;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .footer__bottom::before {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .footer__bottom a {
+    color: inherit;
+  }
+
+  .footer__copy {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

@@ -1,0 +1,60 @@
+/* Solutions */
+
+.solutions {
+  padding: 62px 0;
+  background: var( --color-white);
+}
+
+.solutions__head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.solutions__mark {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.solutions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 1279px) {
+  .solutions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1023px) {
+  .solutions {
+    margin-bottom: var(--section-gap);
+    background: var(--color-bg-light);
+  }
+
+  .solutions__head {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .solutions__mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .solutions__head .title {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .solutions { padding: 24px 0 48px; }
+  .solutions__grid { grid-template-columns: 1fr; }
+}

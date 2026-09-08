@@ -1,0 +1,26 @@
+/* Nav */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__link {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-white);
+  white-space: nowrap;
+  transition: background-color var(--ease), color var(--ease);
+}
+
+.nav__link:not(.nav__link--active):hover { color: var(--color-red-cta); }
+
+
+.nav__link--active {
+  background: var(--color-red-cta);
+  color: var(--color-white);
+}

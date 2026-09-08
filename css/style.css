@@ -1,0 +1,32 @@
+/* INSOL KUBIT — точка входа стилей.
+   Правьте блоки в css/blocks. */
+
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
+@import url("./base/layout.css");
+
+@import url("./blocks/btn.css");
+@import url("./blocks/logo.css");
+@import url("./blocks/icon.css");
+@import url("./blocks/icon-btn.css");
+@import url("./blocks/section.css");
+@import url("./blocks/nav.css");
+@import url("./blocks/header.css");
+@import url("./blocks/burger-panel.css");
+@import url("./blocks/hero.css");
+@import url("./blocks/about.css");
+@import url("./blocks/solutions.css");
+@import url("./blocks/solution-card.css");
+@import url("./blocks/demo.css");
+@import url("./blocks/app.css");
+@import url("./blocks/consult.css");
+@import url("./blocks/contact.css");
+@import url("./blocks/social.css");
+@import url("./blocks/form.css");
+@import url("./blocks/field.css");
+@import url("./blocks/alert.css");
+@import url("./blocks/footer.css");
+@import url("./blocks/underline-field.css");
+@import url("./blocks/modal.css");
+
