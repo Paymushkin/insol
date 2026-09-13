@@ -54,6 +54,36 @@
   padding-top: 24px;
 }
 
+@media (max-width: 1439px) {
+  .solution-card {
+    min-height: 360px;
+    padding: 40px 32px;
+  }
+
+  .solution-card__title {
+    font-size: clamp(20px, 1.8vw, 24px);
+  }
+
+  .solution-card__text {
+    max-width: min(72%, 260px);
+  }
+
+  .solution-card__actions .btn {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .solution-card {
+    min-height: 340px;
+    padding: 36px 28px;
+  }
+
+  .solution-card__text {
+    max-width: 68%;
+  }
+}
+
 @media (max-width: 1023px) {
   .solution-card {
     min-height: 340px;

@@ -210,14 +210,67 @@
   color: var(--color-text-dark);
 }
 
+@media (max-width: 1439px) {
+  .footer__inner {
+    flex-wrap: wrap;
+    gap: 32px 40px;
+    padding: 72px 0 56px;
+    min-width: 0;
+  }
+
+  .footer__cta {
+    flex: 1 1 240px;
+    min-width: 0;
+  }
+
+  .footer__cta-title {
+    margin-bottom: 32px;
+    font-size: clamp(28px, 2.4vw, 32px);
+  }
+
+  .footer__cta-btn {
+    margin-bottom: 120px;
+    width: min(275px, 100%);
+  }
+
+  .footer__phone {
+    font-size: clamp(28px, 2.6vw, 34px);
+  }
+
+  .footer__cols {
+    flex: 1 1 520px;
+    min-width: 0;
+    gap: 32px 40px;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, max-content);
+  }
+
+  .footer__cols > :nth-child(4) {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .footer__list {
+    max-width: none;
+  }
+}
+
 @media (max-width: 1279px) {
   .footer__inner {
     gap: 40px 32px;
     padding-top: 48px;
   }
 
+  .footer__cta {
+    flex: 1 1 100%;
+  }
+
+  .footer__cta-btn {
+    margin-bottom: 40px;
+  }
+
   .footer__cols {
-    grid-template-columns: 1fr 1fr;
+    flex: 1 1 100%;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas:
       "mega solutions"
       "company contacts";
@@ -225,12 +278,8 @@
   }
 
   .footer__phone {
-    padding-top: 32px;
+    padding-top: 16px;
     font-size: 28px;
-  }
-
-  .footer__cta-btn {
-    margin-bottom: 80px;
   }
 }
 

@@ -19,3 +19,10 @@
 .icon--fill circle {
   fill: currentColor;
 }
+
+.icon--check {
+  width: 17px;
+  height: 13px;
+  fill: none;
+  stroke: none;
+}

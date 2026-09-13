@@ -36,6 +36,21 @@
 .logo--on-light .logo__name { color: var(--color-text-dark); }
 .logo--on-light .logo__caption { color: var(--color-gray-600); }
 
+@media (max-width: 1576px) {
+  .logo__mark {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo__name {
+    font-size: 20px;
+  }
+
+  .logo__caption {
+    white-space: normal;
+  }
+}
+
 @media (max-width: 1279px) {
   .logo__mark {
     width: 44px;

@@ -1,0 +1,79 @@
+    <section class="description" id="description" aria-labelledby="description-title">
+      <div class="container">
+        <div class="description__grid">
+          <div class="description__intro">
+            <h2 class="description__title" id="description-title">
+              Описание отраслевого решения<br>
+              Проектная компания
+            </h2>
+            <picture class="description__visual">
+              <source media="(max-width: 1279px)" srcset="/images/description-image-mob.png">
+              <img
+                class="description__image"
+                src="/images/description-image.png"
+                width="1029"
+                height="1029"
+                alt="Инструменты проектной компании: чертежи, планшет, каска и кран"
+              >
+            </picture>
+          </div>
+
+          <div class="description__content" data-description-tabs>
+            <div class="description__tabs" role="tablist" aria-label="Тип установки">
+              <button
+                class="description__tab is-active"
+                id="description-tab-standard"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="description-panel-standard"
+                data-tab="standard"
+              >Стандартная</button>
+              <button
+                class="description__tab"
+                id="description-tab-extended"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="description-panel-extended"
+                data-tab="extended"
+              >Расширенная</button>
+            </div>
+
+            <div
+              class="description__panel is-active"
+              id="description-panel-standard"
+              role="tabpanel"
+              aria-labelledby="description-tab-standard"
+              data-panel="standard"
+            >
+              <p>Данное готовое решение предназначено для компаний, занимающихся строительной деятельностью. Помогает организовать работу по продажам, ведению и разработке проектов, мониторингу объектов строительства. Руководители компании всегда могут получить информацию о стадиях выполнения работ над проектами, состоянии объектов строительства 
+                и их финансовом срезе.</p>
+              <p>Финансовая часть позволяет полностью управлять денежным потоком в компании в части доходов, расходов, аналитики. Проектная часть контролирует процессы в проектной компании. Планирование проектов, постановка задач и контроль за их исполнением.</p>
+              <p>Система автоматизирует процессы управления компанией, а именно: финансы, проекты и взаимоотношения с клиентами и контрагентами.</p>
+              <p>Программа предусматривает возможность интеграции с 1С, платежными системами, IP-телефонией, почтой через готовые модули или API.</p>
+            </div>
+
+            <div
+              class="description__panel"
+              id="description-panel-extended"
+              role="tabpanel"
+              aria-labelledby="description-tab-extended"
+              data-panel="extended"
+              hidden
+            >
+              <p>Данное готовое решение предназначено для компаний, занимающихся проектной деятельностью. Помогает организовать работу по продаже, ведению и мониторингу проектов.</p>
+              <p>Руководители компании всегда могут получить информацию о стадии выполнения работ над проектами, состоянии объектов и их финансовом срезе.</p>
+              <p>В расширенную установку входит функционал стандартного решения и дополнительные модули: складской учёт, отдел снабжения, журнал ТМЦ, расширенная аналитика по проектам.</p>
+              <p>Система автоматизирует процессы управления компанией, а именно: финансы, проекты и взаимоотношения с клиентами и контрагентами.</p>
+              <p>Программа предусматривает возможность интеграции с 1С, платежными системами, IP-телефонией, почтой через готовые модули или API.</p>
+            </div>
+
+            <div class="description__actions">
+              <button class="btn btn--l btn--red" type="button" data-modal-open="demo">Заказать внедрение</button>
+              <a class="btn btn--l btn--ghost" href="/#contacts">Заказать консультацию</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

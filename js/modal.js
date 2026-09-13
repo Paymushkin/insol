@@ -4,7 +4,6 @@
 
   const dialog = modal.querySelector('.modal__dialog');
   const page = document.querySelector('.page');
-  const openers = document.querySelectorAll('[data-modal-open="demo"]');
   const closers = modal.querySelectorAll('[data-modal-close]');
 
   const open = () => {
@@ -21,10 +20,12 @@
     modal.setAttribute('aria-hidden', 'true');
   };
 
-  openers.forEach((btn) => btn.addEventListener('click', (event) => {
+  document.addEventListener('click', (event) => {
+    const opener = event.target.closest('[data-modal-open="demo"]');
+    if (!opener) return;
     event.preventDefault();
     open();
-  }));
+  });
 
   closers.forEach((btn) => btn.addEventListener('click', close));
 

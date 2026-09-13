@@ -21,7 +21,7 @@
 }
 
 .app__text {
-  max-width: 920px;
+  max-width: 1000px;
   margin-bottom: 48px;
   font-size: 18px;
   font-weight: 400;
@@ -44,7 +44,7 @@
 }
 
 .app__headline {
-  position: absolute;
+  /* position: absolute;
   inset: 0;
   z-index: 0;
   display: flex;
@@ -59,11 +59,42 @@
   color: rgba(255, 255, 255, 0.92);
   filter: blur(8px);
   pointer-events: none;
-  user-select: none;
+  user-select: none; */
+  position: absolute;
+  gap: clamp(24px, 2vw, 80px);;
+  font-family: "Proxima Nova", Inter;
+  font-size: clamp(48px, 7vw, 180px);
+  color: #FFF;
+  line-height: 1;
+  letter-spacing: 18px;
+  text-transform: uppercase;
+}
+
+.app-headline__l {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  filter: blur(2.5px);
+}
+
+.app-headline__l--blur {
+  filter: blur(6px);
+}
+
+.app-headline__r {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  text-align: right;
+  filter: blur(2.5px);
+}
+
+.app-headline__r--blur {
+  filter: blur(6px);
 }
 
 .app__phone {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
   display: block;
   width: min(100%, 420px);
@@ -88,6 +119,44 @@
   height: 56px;
 }
 
+@media (max-width: 1439px) {
+  .app {
+    padding: 64px 0 56px;
+  }
+
+  .app__text {
+    max-width: 900px;
+    margin-bottom: 36px;
+    font-size: 16px;
+  }
+
+  .app__headline {
+    font-size: clamp(40px, 6vw, 84px);
+  }
+
+  .app__phone {
+    width: min(100%, 360px);
+  }
+
+  .app__visual {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .app {
+    padding: 56px 0 48px;
+  }
+
+  .app__text {
+    font-size: 15px;
+  }
+
+  .app__phone {
+    width: min(100%, 320px);
+  }
+}
+
 @media (max-width: 1023px) {
   .app {
     padding: 40px 0 48px;
@@ -103,7 +172,7 @@
   }
 
   .app__text-lead {
-    display: none;
+    /* display: none; */
   }
 
   .app__visual {

@@ -80,7 +80,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: 'index.html',
+        main: path.resolve('index.html'),
+        solution: path.resolve('solution.html'),
       },
     },
   },

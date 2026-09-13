@@ -1,8 +1,8 @@
 /* Solutions */
 
 .solutions {
-  padding: 62px 0;
-  background: var( --color-white);
+  padding: 40px 0;
+  background: var(--color-bg-light);
 }
 
 .solutions__head {
@@ -24,6 +24,20 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
+}
+
+@media (max-width: 1439px) {
+  .solutions {
+    padding: 48px 0;
+  }
+
+  .solutions__head {
+    margin-bottom: 40px;
+  }
+
+  .solutions__grid {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 1279px) {

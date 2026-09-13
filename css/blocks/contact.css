@@ -70,6 +70,58 @@
   max-width: 900px;
 }
 
+@media (max-width: 1439px) {
+  .contact {
+    padding: 72px 0 64px;
+  }
+
+  .contact__grid {
+    gap: 32px;
+    min-width: 0;
+  }
+
+  .contact__content,
+  .contact__form {
+    min-width: 0;
+    max-width: none;
+  }
+
+  .contact__label {
+    margin-bottom: 48px;
+  }
+
+  .contact__title {
+    font-size: clamp(32px, 3.2vw, 42px);
+  }
+
+  .contact__text {
+    margin-bottom: 40px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 1279px) {
+  .contact {
+    padding: 56px 0 48px;
+  }
+
+  .contact__grid {
+    gap: 24px;
+  }
+
+  .contact__title {
+    font-size: 32px;
+  }
+
+  .contact__label {
+    margin-bottom: 32px;
+  }
+
+  .contact__text {
+    margin-bottom: 28px;
+  }
+}
+
 @media (max-width: 1023px) {
   .contact {
     margin-bottom: var(--section-gap);

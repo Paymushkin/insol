@@ -1,0 +1,152 @@
+    <section class="compare" id="compare" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="compare__head">
+          <img class="compare__mark" src="/images/solution-logo.svg" width="28" height="28" alt="" aria-hidden="true">
+          <h2 class="title title--h2 compare__title" id="compare-title">Сравнение отраслевого решения</h2>
+        </div>
+
+        <div class="compare__desktop">
+        <div class="compare__scroll">
+          <table class="compare-table">
+            <colgroup>
+              <col class="compare-table__col-name">
+              <col class="compare-table__col-plan">
+              <col class="compare-table__col-plan">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" class="compare-table__corner">Наименование</th>
+                <th scope="col" class="compare-table__plan" data-compare-col="extended">
+                  <div class="compare-table__plan-inner">
+                    <div class="compare-table__visual">
+                      <img class="compare-table__box" src="/images/box-1.png" width="200" height="200" alt="">
+                    </div>
+                    <p class="compare-table__plan-name" data-card-name="Отраслевое решение<br>Расширенное">Расширенная</p>
+                    <button class="btn btn--s btn--red compare-table__btn" type="button" data-modal-open="demo">Заказать</button>
+                    <p class="compare-table__price" data-compare-price="extended">1&nbsp;235&nbsp;000&nbsp;₽</p>
+                  </div>
+                </th>
+                <th scope="col" class="compare-table__plan" data-compare-col="combo">
+                  <div class="compare-table__plan-inner">
+                    <div class="compare-table__visual">
+                      <img class="compare-table__box" src="/images/box-project.webp" width="273" height="200" alt="">
+                    </div>
+                    <p class="compare-table__plan-name">Отраслевое решение<br>+&nbsp;Мегаплан</p>
+                    <button class="btn btn--s btn--red compare-table__btn" type="button" data-modal-open="demo">Заказать</button>
+                    <div class="compare-table__tags" role="group" aria-label="Тип отраслевого решения">
+                      <button class="compare-table__tag" type="button" data-compare-tag="standard" data-price="1 235 000 ₽">Стандартное</button>
+                      <button class="compare-table__tag is-active" type="button" data-compare-tag="extended" data-price="1 235 000 ₽" aria-pressed="true">Расширенное</button>
+                    </div>
+                    <p class="compare-table__price" data-compare-price="combo">1&nbsp;235&nbsp;000&nbsp;₽</p>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="compare-table__group-row">
+                <th scope="colgroup"><span class="compare-table__row-label">Исследование, работы только по аудиту ИБ</span></th>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Консультации, Разработка ТЗ на аудит, анализ результатов</span></th>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Исследование безопасности ОС и ПО сервера на уровне «чёрного ящика»</span></th>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Поиск проблем безопасности кода сайта методом «чёрного ящика»</span></th>
+                <td><span class="compare-table__value">75&nbsp;000&nbsp;₽</span></td>
+                <td><span class="compare-table__value">75&nbsp;000&nbsp;₽</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Частичное исследование безопасности кода сайта</span></th>
+                <td><span class="compare-table__value">80&nbsp;000&nbsp;₽</span></td>
+                <td><span class="compare-table__value">80&nbsp;000&nbsp;₽</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Полноценное исследование безопасности сервера (ОС / ПО) на уровне «белого ящика»</span></th>
+                <td><span class="compare-table__value compare-table__value--empty">—</span></td>
+                <td><span class="compare-table__value compare-table__value--empty">—</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Полное исследование безопасности исходного кода сайта</span></th>
+                <td><span class="compare-table__value compare-table__value--empty">—</span></td>
+                <td><span class="compare-table__value compare-table__value--empty">—</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Исследование безопасности сторонних компонентов кода сайта</span></th>
+                <td><span class="compare-table__value">400&nbsp;000&nbsp;₽</span></td>
+                <td><span class="compare-table__value">400&nbsp;000&nbsp;₽</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Исследование безопасности (корректности) публикации сайта</span></th>
+                <td><span class="compare-table__value">10&nbsp;000&nbsp;₽</span></td>
+                <td><span class="compare-table__value">10&nbsp;000&nbsp;₽</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Определение уровня угрозы обнаруженных проблем ИБ (OWASP)</span></th>
+                <td><span class="compare-table__value">10&nbsp;000&nbsp;₽</span></td>
+                <td><span class="compare-table__value">10&nbsp;000&nbsp;₽</span></td>
+              </tr>
+
+              <tr class="compare-table__group-row">
+                <th scope="colgroup"><span class="compare-table__row-label">Работы по устранению угроз ИБ сайта (дополнительные услуги)</span></th>
+                <td></td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Устранение проблем / угроз безопасности сервера (ОС / ПО)</span></th>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Устранение проблем / угроз безопасности кода (устранение уязвимостей)</span></th>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Устранение проблем / угроз безопасности, связанных с ошибками публикации сайта</span></th>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="compare-table__row-label">Перепроверка устранения уязвимостей по итоговому отчёту</span></th>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+                <td><span class="compare-table__value compare-table__value--check"><!-- @include html/includes/icons/check.html --></span></td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <th scope="row" class="compare-table__total-label">
+                  <span class="compare-table__total-title">Итого</span>
+                  <span class="compare-table__note">* Услуга предоставляется при подключении подписки на услуги ситуационного центра, тариф «CERT»</span>
+                  <span class="compare-table__note">** Услуга предоставляется при подключении подписки на услуги ситуационного центра, тариф «CERT+ADMIN».</span>
+                </th>
+                <td class="compare-table__total" data-compare-col="extended">
+                  <p class="compare-table__plan-name">Расширенная</p>
+                  <p class="compare-table__price" data-compare-price="extended">1&nbsp;235&nbsp;000&nbsp;₽</p>
+                  <button class="btn btn--s btn--red compare-table__btn" type="button" data-modal-open="demo">Заказать</button>
+                </td>
+                <td class="compare-table__total" data-compare-col="combo">
+                  <p class="compare-table__plan-name">Отраслевое решение<br>+&nbsp;Мегаплан</p>
+                  <p class="compare-table__price" data-compare-price="combo">1&nbsp;235&nbsp;000&nbsp;₽</p>
+                  <button class="btn btn--s btn--red compare-table__btn" type="button" data-modal-open="demo">Заказать</button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        </div>
+
+        <div class="compare-cards"></div>
+      </div>
+    </section>

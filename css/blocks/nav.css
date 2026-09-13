@@ -24,3 +24,23 @@
   background: var(--color-red-cta);
   color: var(--color-white);
 }
+
+.page--home .nav__link[href="/"],
+.page--solution .nav__link[href="/solution.html"] {
+  background: var(--color-red-cta);
+  color: var(--color-white);
+}
+
+.page--home .nav__link[href="/"]:hover,
+.page--solution .nav__link[href="/solution.html"]:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 1576px) {
+  .nav { gap: 4px; }
+
+  .nav__link {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}

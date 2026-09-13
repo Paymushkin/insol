@@ -14,16 +14,21 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .consult__content {
   position: relative;
-  padding: 162px 0 144px 90px;
+  padding-left: 90px;
   z-index: 1;
   max-width: 770px;
 }
 
 .consult__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1lh;
   margin-bottom: 26px;
   font-size: 42px;
   font-weight: 500;
@@ -38,7 +43,7 @@
 
 .consult__actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
 }
 
@@ -46,6 +51,73 @@
   display: block;
   width: auto;
   height: 100%;
+}
+
+@media (max-width: 1576px) {
+  .consult__grid {
+    gap: 16px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .consult__content {
+    flex: 1 1 48%;
+    min-width: 0;
+    max-width: 560px;
+    padding-left: 60px;
+  }
+
+  .consult__title {
+    font-size: 32px;
+  }
+
+  .consult__text {
+    max-width: none;
+  }
+
+  .consult__visual {
+    flex: 1 1 42%;
+    min-width: 0;
+    max-width: 48%;
+  }
+
+  .consult__visual picture,
+  .consult__visual img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1279px) {
+  .consult__content {
+    padding: 0 0 0 32px;
+    max-width: none;
+  }
+
+  .consult__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    gap: 0;
+  }
+
+  .consult__text {
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  .consult__actions {
+    gap: 8px;
+  }
+
+  .consult__actions .btn {
+    padding-inline: 20px;
+  }
+
+  .consult__visual {
+    max-width: 44%;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -74,6 +146,7 @@
   .consult__title {
     order: 1;
     margin-bottom: 30px;
+    max-width: 900px;
     font-size: 26px;
     font-weight: 500;
     line-height: 1.1;
@@ -87,7 +160,7 @@
   .consult__text {
     order: 2;
     margin-bottom: 28px;
-    max-width: none;
+    max-width: 600px;
     font-size: 14px;
     line-height: 1.6;
     text-align: left;
@@ -99,18 +172,19 @@
     display: flex;
     justify-content: center;
     margin-bottom: 32px;
+    max-width: 100%;
   }
 
   .consult__visual picture,
   .consult__visual img {
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     height: auto;
   }
 
   .consult__actions {
     order: 4;
-    flex-direction: column;
+    /* flex-direction: column; */
     flex-wrap: nowrap;
     gap: 12px;
     width: 100%;

@@ -1,0 +1,635 @@
+/* Compare — сравнение отраслевого решения */
+
+.compare {
+  padding: 100px 0;
+  margin-bottom: 20px;
+  background: var(--color-bg-light);
+  border-radius: var(--radius-section);
+}
+
+.compare__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.compare__mark {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+.compare__title {
+  margin: 0;
+  font-size: clamp(26px, 1.8vw + 12px, 42px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--color-text-dark);
+}
+
+.compare__scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.compare-table {
+  --compare-fs-32: clamp(22px, 1.12vw + 10.5px, 32px);
+  --compare-fs-22: clamp(16px, 0.67vw + 9.1px, 22px);
+  --compare-fs-18: clamp(14px, 0.45vw + 9.4px, 18px);
+  --compare-fs-16: clamp(13px, 0.34vw + 9.6px, 16px);
+  --compare-fs-12: clamp(10px, 0.22vw + 7.7px, 12px);
+  --compare-plan-min: clamp(260px, 6.5vw + 190px, 340px);
+  --compare-plan-max: 440px;
+  --compare-name-max: 1000px;
+  --compare-label-max: 760px;
+  --compare-pad-x: clamp(16px, 1.8vw, 32px);
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.compare-table__col-name {
+  width: auto;
+  max-width: var(--compare-name-max);
+}
+
+.compare-table__col-plan {
+  width: var(--compare-plan-max);
+  min-width: var(--compare-plan-min);
+  max-width: var(--compare-plan-max);
+}
+
+.compare-table th,
+.compare-table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 12px var(--compare-pad-x);
+  border: 0;
+  font-weight: 400;
+}
+
+.compare-table thead th:nth-child(1),
+.compare-table tbody th,
+.compare-table tfoot th {
+  background: var(--color-white);
+  text-align: left;
+}
+
+.compare-table thead th:nth-child(2),
+.compare-table thead th:nth-child(3),
+.compare-table tbody td:nth-child(2),
+.compare-table tbody td:nth-child(3),
+.compare-table tfoot td:nth-child(2),
+.compare-table tfoot td:nth-child(3) {
+  min-width: var(--compare-plan-min);
+  max-width: var(--compare-plan-max);
+}
+
+.compare-table thead th:nth-child(2),
+.compare-table tbody td:nth-child(2),
+.compare-table tfoot td:nth-child(2) {
+  background: transparent;
+}
+
+.compare-table thead th:nth-child(3),
+.compare-table tbody td:nth-child(3),
+.compare-table tfoot td:nth-child(3) {
+  background: var(--color-white);
+}
+
+/* Скругление только внешних углов таблицы */
+.compare-table thead th:nth-child(1) {
+  border-radius: 24px 0 0 0;
+}
+
+.compare-table thead th:nth-child(3) {
+  border-radius: 0 24px 0 0;
+}
+
+.compare-table tfoot th {
+  border-radius: 0 0 0 24px;
+}
+
+.compare-table tfoot td:nth-child(3) {
+  border-radius: 0 0 24px 0;
+}
+
+.compare-table thead th {
+  vertical-align: top;
+  padding-top: 45px;
+  padding-left: var(--compare-pad-x);
+  padding-right: var(--compare-pad-x);
+}
+
+.compare-table th.compare-table__corner {
+  padding: 45px var(--compare-pad-x);
+  font-size: var(--compare-fs-32);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-black);
+}
+
+.compare-table th.compare-table__plan {
+  height: 1px;
+  padding: 45px var(--compare-pad-x) 20px;
+}
+
+.compare-table__plan-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  min-height: 380px;
+}
+
+.compare-table__visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: clamp(140px, 12vw, 200px);
+  margin-bottom: 28px;
+}
+
+.compare-table__box {
+  display: block;
+  width: auto;
+  height: clamp(140px, 12vw, 200px);
+  max-width: 100%;
+  max-height: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.compare-table__plan-name {
+  margin: 0 0 24px;
+  max-width: 220px;
+  min-height: calc(var(--compare-fs-16) * 1.25 * 2);
+  font-size: var(--compare-fs-16);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--color-text-dark);
+}
+
+.compare-table__btn {
+  min-height: 44px;
+  min-width: 148px;
+  margin-bottom: 18px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+}
+
+.compare-table__price {
+  margin: 0;
+  font-size: var(--compare-fs-32);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--color-text-dark);
+}
+
+.compare-table thead .compare-table__price {
+  margin-top: auto;
+}
+
+.compare-table__tags {
+  display: inline-flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  padding: 4px;
+  border: 1px solid #dcdfe8;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.compare-table__tag {
+  min-height: 32px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: var(--compare-fs-12);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-green-deep);
+  transition: background-color var(--ease), color var(--ease);
+}
+
+.compare-table__tag.is-active {
+  background: rgba(31, 177, 132, 0.18);
+  color: var(--color-green-deep);
+}
+
+.compare-table__group-row th {
+  padding: 28px var(--compare-pad-x) 14px;
+  font-size: var(--compare-fs-22);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+  background: var(--color-white) !important;
+}
+
+.compare-table tbody th[scope="row"] {
+  padding: 24px var(--compare-pad-x);
+  font-size: var(--compare-fs-22);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.compare-table__row-label {
+  display: block;
+  max-width: min(var(--compare-label-max), 100%);
+}
+
+.compare-table tbody td {
+  padding: 12px var(--compare-pad-x);
+}
+
+.compare-table__value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 44px;
+  padding: 16px var(--compare-pad-x);
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid #dcdfe8;
+  font-size: var(--compare-fs-22);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.compare-table__value--check {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(27, 102, 79, 0.08);
+}
+
+.compare-table__value--check .icon--check {
+  width: 17px;
+  height: 13px;
+  stroke: none;
+  fill: none;
+}
+
+.compare-table__value--empty {
+  min-width: 0;
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-gray-400);
+  font-weight: 500;
+}
+
+.compare-table th.compare-table__total-label {
+  padding: 28px var(--compare-pad-x) 32px !important;
+  vertical-align: top;
+}
+
+.compare-table__total-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: var(--compare-fs-22);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.compare-table__note {
+  display: block;
+  max-width: min(var(--compare-label-max), 100%);
+  margin-bottom: 14px;
+  font-size: var(--compare-fs-18);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #a9aeb2;
+}
+
+.compare-table__note:last-child {
+  margin-bottom: 0;
+}
+
+.compare-table__total {
+  padding: 28px var(--compare-pad-x) 32px !important;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.compare-table__total .compare-table__plan-name {
+  display: block;
+  max-width: none;
+  margin: 0 auto 18px;
+  font-size: var(--compare-fs-22);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.compare-table__total .compare-table__price {
+  margin-bottom: 32px;
+}
+
+.compare-cards {
+  display: none;
+}
+
+@media (max-width: 1439px) {
+  .compare {
+    padding: 48px 0 64px;
+  }
+
+  .compare__title {
+    font-size: clamp(28px, 3vw, 36px);
+  }
+
+  .compare-table__plan-inner {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .compare-table {
+    --compare-plan-min: 300px;
+    --compare-plan-max: 340px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .compare-table {
+    --compare-plan-min: 260px;
+    --compare-plan-max: 280px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .compare {
+    padding: 60px 0;
+  }
+
+  .compare__head {
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  .compare__title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .compare__mark {
+    width: 28px;
+    height: 28px;
+    margin-top: 0;
+  }
+
+  .compare__desktop {
+    display: none;
+  }
+
+  .compare-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .compare-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 20px 24px;
+    background: var(--color-white);
+    border-radius: 24px;
+    text-align: center;
+  }
+
+  .compare-card.is-open {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+  }
+
+  .compare-card__box {
+    width: auto;
+    height: 135px;
+    max-width: 200px;
+    margin-bottom: 24px;
+    object-fit: contain;
+  }
+
+  .compare-card__name {
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-text-dark);
+  }
+
+  .compare-card__price {
+    margin: 0 0 20px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text-dark);
+  }
+
+  .compare-card__order,
+  .compare-card__tags,
+  .compare-card__details {
+    display: none;
+    width: 100%;
+  }
+
+  .compare-card.is-open .compare-card__order,
+  .compare-card.is-open .compare-card__tags {
+    display: block;
+  }
+
+  .compare-card.is-open .compare-card__details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    column-gap: 36px;
+    align-items: center;
+  }
+
+  .compare-card.is-open .compare-card__tags {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 28px;
+  }
+
+  .compare-card__order {
+    margin-bottom: 24px;
+  }
+
+  .compare-card__btn {
+    width: 100%;
+  }
+
+  .compare-card__details {
+    padding-top: 0;
+    border-top: 1px solid #e2e2e2;
+    text-align: left;
+  }
+
+  .compare-card__group,
+  .compare-card__row {
+    display: contents;
+  }
+
+  .compare-card__group .compare-card__label {
+    min-width: 0;
+    padding: 25px 0;
+    color: var(--color-text-dark);
+  }
+
+  .compare-card__details > .compare-card__group:first-child .compare-card__label {
+    padding-top: 35px;
+    padding-bottom: 5px;
+  }
+
+  .compare-card__notes {
+    grid-column: 1 / -1;
+  }
+
+  .compare-card__label {
+    min-width: 0;
+    color: var(--color-text-dark);
+  }
+
+  .compare-card__row .compare-card__label,
+  .compare-card__row .compare-card__value {
+    margin-bottom: 0;
+    padding: 25px 0;
+    align-self: center;
+  }
+
+  .compare-card__label .compare-table__row-label {
+    display: block;
+    width: 100%;
+    max-width: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .compare-card__group .compare-table__row-label {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .compare-card__value {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .compare-card__value .compare-table__value {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    background: var(--color-white);
+    border: 1px solid #dcdfe8;
+  }
+
+  .compare-card__value .compare-table__value--check {
+    width: 26px;
+    min-width: 26px;
+    height: 26px;
+    min-height: 26px;
+    padding: 0;
+    border: 0;
+    background: rgba(27, 102, 79, 0.08);
+  }
+
+  .compare-card__value .compare-table__value--check .icon--check {
+    width: 13px;
+    height: 10px;
+  }
+
+  .compare-card__value .compare-table__value--empty {
+    width: auto;
+    padding: 0;
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .compare-card__notes {
+    margin: 12px 0 0;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  .compare-card__note {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #a9aeb2;
+  }
+
+  .compare-card__note:last-child {
+    margin-bottom: 0;
+  }
+
+  .compare-card__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 8px;
+    padding: 14px 24px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--color-green-primary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  .compare-card.is-open .compare-card__toggle {
+    margin-top: 40px;
+    background: transparent;
+    border: 1px solid var(--color-red-cta);
+    color: var(--color-red-cta);
+  }
+
+  .compare-card__toggle-close {
+    display: none;
+  }
+
+  .compare-card.is-open .compare-card__toggle-open {
+    display: none;
+  }
+
+  .compare-card.is-open .compare-card__toggle-close {
+    display: inline;
+  }
+}

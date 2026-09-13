@@ -45,6 +45,11 @@
     color: var(--color-white);
   }
 
+  .page--home .burger-panel__nav a[href="/"],
+  .page--solution .burger-panel__nav a[href="/solution.html"] {
+    color: var(--color-red-cta);
+  }
+
   .burger-panel__footer {
     display: grid;
     gap: 32px;

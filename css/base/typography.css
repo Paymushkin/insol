@@ -20,8 +20,13 @@
 .text--on-dark { color: var(--color-text-on-dark); }
 .text--white { color: var(--color-text-white); }
 
+@media (max-width: 1439px) {
+  .title--h1 { font-size: clamp(32px, 3vw, 42px); }
+  .title--h2 { font-size: clamp(36px, 3.2vw, 48px); }
+}
+
 @media (max-width: 1279px) {
-  .title--h1 { font-size: 40px; }
+  .title--h1 { font-size: clamp(28px, 3.2vw, 36px); }
   .title--h2 { font-size: 32px; }
   .title--h3 { font-size: 26px; }
 }

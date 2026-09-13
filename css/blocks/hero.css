@@ -122,6 +122,110 @@
 
 .hero__dot.is-active { background: var(--color-hero-dot-active); }
 
+/* Статичный hero внутренней страницы (без слайдера) */
+.hero--static {
+  height: 630px;
+}
+
+.hero--static > .hero__container {
+  height: 100%;
+  padding-bottom: 80px;
+}
+
+.hero--static .hero__pager,
+.hero--static .hero__pager-slot {
+  display: none;
+}
+
+@media (max-width: 1439px) {
+  .hero--static {
+    height: 630px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .hero--static {
+    height: 630px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .hero {
+    height: min(100vh, 820px);
+  }
+
+  .hero__container {
+    padding-bottom: 88px;
+  }
+
+  .hero__inner {
+    gap: 24px;
+    align-items: center;
+  }
+
+  .hero__lead {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .hero__actions {
+    margin-top: 32px;
+    gap: 12px;
+  }
+
+  .hero__visual {
+    height: min(420px, 46vh);
+    min-width: 0;
+  }
+
+  .hero__boxes {
+    width: min(100%, 520px);
+    height: 100%;
+    max-height: min(420px, 46vh);
+  }
+}
+
+@media (max-width: 1279px) {
+  .hero {
+    height: min(100svh, 760px);
+  }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 16px;
+  }
+
+  .hero__title,
+  .hero__lead {
+    max-width: none;
+  }
+
+  .hero__lead {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .hero__actions {
+    margin-top: 24px;
+  }
+
+  .hero__actions .btn {
+    padding-inline: 24px;
+  }
+
+  .hero__visual {
+    height: min(340px, 40vh);
+  }
+
+  .hero__boxes {
+    max-height: min(340px, 40vh);
+  }
+
+  .hero__pager {
+    bottom: 28px;
+  }
+}
+
 @media (max-width: 1023px) {
   .hero {
     height: 100svh;
@@ -260,6 +364,19 @@
   .hero__dot {
     width: 27px;
     height: 7px;
+  }
+
+  .hero--static {
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  .hero--static > .hero__container {
+    padding-bottom: 40px;
+  }
+
+  .hero--static .hero__actions {
+    order: 4;
   }
 }
 
