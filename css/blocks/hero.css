@@ -213,6 +213,10 @@
     padding-inline: 24px;
   }
 
+  .hero__actions .btn:only-child {
+    padding-inline: 40px;
+  }
+
   .hero__visual {
     height: min(340px, 40vh);
   }

@@ -2,9 +2,8 @@
 
 .description {
   padding: 100px 0;
-  margin-bottom: 20px;
-  background: var(--color-white);
-  border-radius: var(--radius-section);
+  background: var( --color-bg-light);
+  border-radius: var(--radius-section) var(--radius-section) 0 0;
 }
 
 .description__grid {

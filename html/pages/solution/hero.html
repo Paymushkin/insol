@@ -2,22 +2,22 @@
       <div class="container hero__container">
         <div class="hero__inner">
           <div class="hero__content">
-            <h1 class="title title--h1 hero__title" id="hero-title">Проектная компания</h1>
+            <h1 class="title title--h1 hero__title" id="hero-title">{{solutionTitle}}</h1>
             <p class="hero__lead">Программный продукт под любую сферу деятельности, индивидуальная настройка бизнес-процессов, CRM-система, интеграция с «1С:ЗУП» и IP-телефонией.</p>
             <div class="hero__actions">
               <button class="btn btn--l btn--green" type="button" data-modal-open="demo">Заказать демонстрацию</button>
-              <a class="btn btn--l btn--ghost-dark" href="/#contacts">Заказать консультацию</a>
+              <a class="btn btn--l btn--ghost-dark" href="/contacts.html">Заказать консультацию</a>
             </div>
           </div>
           <div class="hero__visual">
             <picture>
-              <source media="(max-width: 1023px)" srcset="/images/solution-hero-image-mob.png">
+              <source media="(max-width: 1023px)" srcset="{{solutionDir}}/hero-image-mob.png">
               <img
                 class="hero__boxes"
-                src="/images/solution-hero-image.png"
+                src="{{solutionDir}}/hero-image.png"
                 width="640"
                 height="475"
-                alt="Коробка Мегаплан — решение для проектной компании"
+                alt="Коробка Мегаплан — решение для {{solutionTitle}}"
               >
             </picture>
           </div>

@@ -1,0 +1,125 @@
+/* Benefits — «Что вы получаете?» */
+
+.benefits {
+  padding: 100px 0;
+  margin-bottom: 20px;
+  scroll-margin-top: calc(var(--header-h) + 20px);
+  background-color: var(--color-near-black);
+  background-image: url("/images/app-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--radius-section);
+  overflow: hidden;
+}
+
+.benefits__title {
+  margin: 0 0 70px;
+  font-size: clamp(26px, calc(26px + 14 * ((100vw - 1024px) / 896)), 40px);
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.benefits__grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.benefits__card {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
+  min-width: 0;
+}
+
+.benefits__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: clamp(200px, calc(200px + 150 * ((100vw - 1024px) / 896)), 320px);
+  margin-bottom: 28px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.benefits__name {
+  margin: 0 0 12px;
+  font-size: clamp(22px, calc(22px + 10 * ((100vw - 1024px) / 896)), 32px);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-white);
+}
+
+.benefits__text {
+  margin: 0;
+  font-size: clamp(14px, calc(14px + 4 * ((100vw - 1024px) / 896)), 18px);
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 1279px) {
+  .benefits__title {
+    margin-bottom: 40px;
+  }
+  .benefits__grid {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .benefits__card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .benefits {
+    padding: 60px 0;
+    background-image: url("/images/benefits-bg-mob.png");
+  }
+
+  .benefits__card {
+    max-width: 240px
+  }
+
+  .benefits__title {
+    margin-bottom: 32px;
+    font-size: 26px;
+    text-align: left;
+  }
+
+
+  .benefits__image {
+    /* max-height: 170px; */
+    margin-bottom: 30px;
+  }
+
+  .benefits__name {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+
+  .benefits__text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefits__grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .benefits__card {
+    max-width: none;
+  }
+}

@@ -46,7 +46,10 @@
   }
 
   .page--home .burger-panel__nav a[href="/"],
-  .page--solution .burger-panel__nav a[href="/solution.html"] {
+  .page--solution .burger-panel__nav a[href="/#solutions"],
+  .page--implementation .burger-panel__nav a[href="/implementation.html"],
+  .page--support .burger-panel__nav a[href="/support.html"],
+  .page--contacts .burger-panel__nav a[href="/contacts.html"] {
     color: var(--color-red-cta);
   }
 

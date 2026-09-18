@@ -20,6 +20,11 @@
   fill: currentColor;
 }
 
+.icon--pin {
+  width: 18px;
+  height: 21px;
+}
+
 .icon--check {
   width: 17px;
   height: 13px;

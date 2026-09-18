@@ -149,6 +149,10 @@
   color: var(--color-gray-600);
 }
 
+.footer__contact .icon--pin {
+  color: #878C93;
+}
+
 .footer__contact a {
   color: inherit;
 }
@@ -169,6 +173,18 @@
   height: 44px;
   background: var(--color-white);
   border-color: var(--color-gray-100);
+  transition: background-color var(--ease), border-color var(--ease), color var(--ease);
+}
+
+.footer__socials .social--light:hover {
+  background: var(--color-green-primary);
+  border-color: var(--color-green-primary);
+  color: var(--color-white);
+}
+
+.footer__socials .social--light:active {
+  background: var(--color-green-deep);
+  border-color: var(--color-green-deep);
 }
 
 .footer__bottom {

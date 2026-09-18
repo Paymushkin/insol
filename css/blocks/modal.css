@@ -29,38 +29,92 @@
   width: min(920px, 100%);
   max-height: calc(100vh - 40px);
   overflow: auto;
-  padding: 40px 40px 32px;
+  padding: 70px 60px;
   background: var(--color-white);
   border-radius: 24px;
 }
 
 .modal__close {
   position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 40px;
-  height: 40px;
+  top: 30px;
+  right: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
   color: var(--color-text-dark);
+}
+
+.modal__close svg {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: none;
+  flex-shrink: 0;
+  display: block;
 }
 
 .modal__title {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 56px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .modal-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 32px;
+  gap: 40px 30px;
+  align-items: stretch;
+}
+
+.modal-form > .alerts {
+  grid-column: 1 / -1;
+}
+
+.modal-form > .alerts:empty {
+  display: none;
+}
+
+.modal-form__comment {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 0;
+}
+
+.modal-form__comment-field {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.modal-form__comment-field .underline-field__input {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  resize: none;
 }
 
 .modal-form__file {
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
   display: inline-flex;
   align-items: center;
-  align-self: end;
   gap: 8px;
   color: var(--color-green-deep);
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
   cursor: pointer;
 }
 
@@ -68,20 +122,31 @@
 
 .modal-form__captcha {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 16px;
   grid-column: 1;
+  min-width: 0;
+}
+
+.modal-form__captcha-field {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .modal-form__eq {
-  min-width: 96px;
-  height: 44px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg-light);
+  flex-shrink: 0;
+  min-height: 55px;
+  padding: 12px 36px;
+  background: #F0F1F3;
   border-radius: 10px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .modal-form__actions {
@@ -90,10 +155,11 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .modal-form__note {
+  max-width: 282px;
   font-size: 13px;
   color: var(--color-gray-400);
   text-align: center;
@@ -101,8 +167,68 @@
 
 @media (max-width: 767px) {
   .modal { padding: 12px; align-items: flex-start; }
-  .modal__dialog { padding: 28px 20px 24px; border-radius: 20px; }
-  .modal-form,
-  .modal-form__captcha { grid-template-columns: 1fr; grid-column: 1; }
-  .modal-form__actions { grid-column: 1; }
+
+  .modal__dialog {
+    padding: 40px 30px;
+    border-radius: 20px;
+  }
+
+  .modal__title {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .modal-form {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .modal-form > .alerts { order: 0; }
+  .modal-form__name { order: 1; }
+  .modal-form__phone { order: 2; }
+  .modal-form__email { order: 3; }
+  .modal-form__solution { order: 4; }
+  .modal-form__comment { order: 5; }
+  .modal-form__captcha { order: 6; }
+  .modal-form__actions { order: 7; }
+
+  .modal-form__comment {
+    grid-row: auto;
+    min-height: 0;
+    padding-bottom: 37px;
+  }
+
+  .modal-form__comment-field .underline-field__input {
+    flex: 0 0 auto;
+    height: 46px;
+    min-height: 46px;
+  }
+
+  .modal-form__file {
+    left: 0;
+    right: auto;
+  }
+
+  .modal-form__captcha {
+    grid-column: 1;
+  }
+
+  .modal-form__eq {
+    font-size: 20px;
+    min-height: 55px;
+    padding: 12px 24px;
+  }
+
+  .modal-form__actions {
+    margin-top: 0;
+    align-items: stretch;
+  }
+
+  .modal-form__actions .btn {
+    width: 100%;
+  }
+
+  .modal-form__note {
+    align-self: center;
+  }
 }

@@ -8,6 +8,7 @@
 
 .underline-field__label {
   font-size: 14px;
+  line-height: 1.4;
   color: var(--color-gray-400);
 }
 
@@ -20,6 +21,20 @@
   background: transparent;
   border-radius: 0;
   outline: none;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.underline-field__input::placeholder {
+  color: #A9AEB2;
+}
+
+.underline-field__select:required:invalid {
+  color: #A9AEB2;
+}
+
+.underline-field__select:required:valid {
+  color: inherit;
 }
 
 .underline-field__input:focus,

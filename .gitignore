@@ -3,3 +3,26 @@ dist
 .DS_Store
 *.log
 .vite
+
+# Design source dumps / scratch assets (not for deploy)
+screenshots/
+solution-image/
+cases/
+cases-logos/
+clients/
+description-image.png
+description-image-mob.png
+documents.svg
+payments.svg
+grid.svg
+Новое Отраслевое решение_ Транспортно-логистическая компания.html
+Новое Отраслевое решение_ Транспортно-логистическая компания_files/
+мебельное производство/
+обслуживание газового оборудования /
+производство и монтаж дверей/
+производство и продажа окон/
+проищводство и продажа кухонь/
+ремонт квартир под ключ/
+строительная компания/
+транспортно-логистическая компания/
+что получаете/

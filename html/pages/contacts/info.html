@@ -1,0 +1,96 @@
+    <section class="contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <h1 class="title title--h1 contacts__title" id="contacts-title">Контакты</h1>
+
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <p class="contacts__label">Адрес</p>
+            <p class="contacts__value">г. Москва, ул. Профсоюзная, д. 26/44</p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__label">Юридический адрес</p>
+            <p class="contacts__value">105118, г. Москва, ул. Профсоюзная, <br>д. 26/44 ООО «Смарт-Сервис»</p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__label">Телефон</p>
+            <p class="contacts__value">
+              <a href="tel:+74995028023">+7 (499) 502-80-23</a>
+            </p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__label">Отдел продаж</p>
+            <p class="contacts__value">
+              <a href="mailto:sales@it-in.ru">sales@it-in.ru</a>
+            </p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__label">Техническая поддержка</p>
+            <p class="contacts__value">
+              <a href="mailto:support@it-in.ru">support@it-in.ru</a>
+            </p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__label">Общие вопросы</p>
+            <p class="contacts__value">
+              <a href="mailto:info@it-in.ru">info@it-in.ru</a>
+            </p>
+          </li>
+        </ul>
+
+        <div
+          class="contacts__map"
+          id="contacts-map"
+          data-map
+          data-lat="55.755814"
+          data-lng="37.617635"
+          data-zoom="9"
+          role="region"
+          aria-label="Карта Москвы"
+        ></div>
+
+        <div class="contact__grid contacts__form">
+          <div class="contact__content">
+            <p class="contact__label">Есть вопросы?</p>
+            <h2 class="title title--h2 contact__title">Мы всегда рады пообщаться</h2>
+            <div class="contact__socials">
+              <a class="social" href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <!-- @include html/includes/icons/telegram-lg.html -->
+              </a>
+              <a class="social" href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте">
+                <!-- @include html/includes/icons/vk.html -->
+              </a>
+              <a class="social" href="https://wa.me/74995028023" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <!-- @include html/includes/icons/whatsapp.html -->
+              </a>
+            </div>
+          </div>
+
+          <form class="form contact__form" action="#" method="post" data-form novalidate>
+            <div class="alerts" data-alerts></div>
+            <div class="form__row">
+              <label class="field">
+                <span class="visually-hidden">Имя</span>
+                <input class="field__control" type="text" name="name" placeholder="Имя" required autocomplete="name">
+              </label>
+              <label class="field">
+                <span class="visually-hidden">E-mail</span>
+                <input class="field__control" type="email" name="email" placeholder="E-mail" required autocomplete="email">
+              </label>
+            </div>
+            <label class="field">
+              <span class="visually-hidden">Комментарий</span>
+              <textarea class="field__textarea" name="comment" placeholder="Комментарий"></textarea>
+            </label>
+            <div class="form__captcha">
+              <span class="form__equation">88 ÷ 8 =</span>
+              <input class="field__control" type="text" name="captcha" placeholder="Введите ответ" required inputmode="numeric">
+            </div>
+            <label class="form__consent">
+              <input type="checkbox" name="agree" required>
+              <span>Я ознакомлен(а) и даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в «<a href="#privacy">Согласии на обработку персональных данных</a>»</span>
+            </label>
+            <button class="btn btn--l btn--full form__submit" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </section>

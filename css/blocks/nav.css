@@ -26,13 +26,19 @@
 }
 
 .page--home .nav__link[href="/"],
-.page--solution .nav__link[href="/solution.html"] {
+.page--solution .nav__link[href="/#solutions"],
+.page--implementation .nav__link[href="/implementation.html"],
+.page--support .nav__link[href="/support.html"],
+.page--contacts .nav__link[href="/contacts.html"] {
   background: var(--color-red-cta);
   color: var(--color-white);
 }
 
 .page--home .nav__link[href="/"]:hover,
-.page--solution .nav__link[href="/solution.html"]:hover {
+.page--solution .nav__link[href="/#solutions"]:hover,
+.page--implementation .nav__link[href="/implementation.html"]:hover,
+.page--support .nav__link[href="/support.html"]:hover,
+.page--contacts .nav__link[href="/contacts.html"]:hover {
   color: var(--color-white);
 }
 

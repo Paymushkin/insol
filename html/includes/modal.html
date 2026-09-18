@@ -6,18 +6,18 @@
       </button>
       <h2 class="title title--h3 modal__title" id="modal-title">Заказать демонстрацию</h2>
       <form class="modal-form" action="#" method="post" data-form novalidate>
-        <div class="alerts" data-alerts style="grid-column: 1 / -1;"></div>
-        <label class="underline-field">
+        <div class="alerts" data-alerts></div>
+        <label class="underline-field modal-form__name">
           <span class="underline-field__label">Ваше имя</span>
           <input class="underline-field__input" type="text" name="name" required autocomplete="name">
         </label>
-        <label class="underline-field">
-          <span class="underline-field__label">Мебельная компания</span>
+        <label class="underline-field modal-form__solution">
+          <span class="underline-field__label">Готовое решение</span>
           <select class="underline-field__select" name="solution" required>
-            <option value="">Выберите решение</option>
+            <option value="" selected disabled>Выберите решение</option>
             <option>Строительная компания</option>
             <option>Проектная компания</option>
-            <option selected>Мебельная компания</option>
+            <option>Мебельная компания</option>
             <option>Производство и продажа дверей</option>
             <option>Производство и продажа окон</option>
             <option>Производство и продажа кухонь</option>
@@ -26,26 +26,31 @@
             <option>Обслуживание газового оборудования</option>
           </select>
         </label>
-        <label class="underline-field">
+        <label class="underline-field modal-form__phone">
           <span class="underline-field__label">Номер телефона</span>
-          <input class="underline-field__input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" data-phone required autocomplete="tel">
+          <input class="underline-field__input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" data-phone required autocomplete="tel" inputmode="tel">
         </label>
-        <label class="underline-field">
+        <div class="modal-form__comment">
           <span class="underline-field__label">Комментарий</span>
-          <input class="underline-field__input" type="text" name="comment">
-        </label>
-        <label class="underline-field">
+          <div class="modal-form__comment-field">
+            <textarea class="underline-field__input" name="comment" rows="1"></textarea>
+            <label class="modal-form__file">
+              <!-- @include html/includes/icons/paper-clip.html -->
+              Прикрепить файл
+              <input type="file" name="file">
+            </label>
+          </div>
+        </div>
+        <label class="underline-field modal-form__email">
           <span class="underline-field__label">E-mail</span>
           <input class="underline-field__input" type="email" name="email" required autocomplete="email">
         </label>
-        <label class="modal-form__file">
-          <!-- @include html/includes/icons/attach.html -->
-          Прикрепить файл
-          <input type="file" name="file">
-        </label>
         <div class="modal-form__captcha">
           <span class="modal-form__eq">88 ÷ 8 =</span>
-          <input class="underline-field__input" type="text" name="captcha" placeholder="Введите ответ" required inputmode="numeric">
+          <label class="underline-field modal-form__captcha-field">
+            <span class="underline-field__label">Введите ответ</span>
+            <input class="underline-field__input" type="text" name="captcha" required inputmode="numeric">
+          </label>
         </div>
         <div class="modal-form__actions">
           <button class="btn btn--l btn--red" type="submit">Отправить заявку</button>

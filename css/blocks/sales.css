@@ -1,0 +1,260 @@
+/* Sales — продажи проектов */
+
+.sales {
+  --sales-card-bg: #121c19;
+  --sales-card-active: #1b664f;
+  position: relative;
+  padding: 100px 0 234px;
+  margin-bottom: 20px;
+  scroll-margin-top: calc(var(--header-h) + 20px);
+  background-color: var(--color-near-black);
+  background-image: url("/images/sales-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--radius-section);
+  overflow: hidden;
+}
+
+h2.sales__title {
+  margin: 0 0 50px;
+  font-size: 55px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.sales__lead {
+  max-width: 1060px;
+  margin: 0 auto 70px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.sales__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.sales__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 100px;
+  min-height: 380px;
+  padding: 25px 25px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(24, 26, 27, 0.05);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color var(--ease), border-color var(--ease);
+}
+
+.sales__card:nth-child(3) {
+  grid-column: 4;
+}
+
+.sales__card:nth-child(4) {
+  grid-column: 2;
+}
+
+.sales__card:nth-child(5) {
+  grid-column: 3;
+}
+
+.sales__card.is-active {
+  --sales-card-bg: var(--sales-card-active);
+  border-color: transparent;
+  background: var(--sales-card-active);
+}
+
+.sales__card:hover:not(.is-active) {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.sales__card:focus-visible {
+  outline: 2px solid var(--color-green-primary);
+  outline-offset: 3px;
+}
+
+.sales__card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sales__plus {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: var(--sales-card-active);
+  color: var(--color-white);
+}
+
+.sales__card.is-active .sales__plus {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.sales__icon {
+  display: block;
+  width: auto;
+  /* max-width: 96px; */
+  height: 100px;
+  object-fit: contain;
+  object-position: top right;
+}
+
+.sales__card-body {
+  margin-top: auto;
+}
+
+.sales__card-title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--color-white);
+}
+
+.sales__card-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--color-white);
+  opacity: 0.5;
+}
+
+@media (max-width: 1439px) {
+  h2.sales__title {
+    font-size: 36px;
+  }
+
+  .sales__grid {
+    max-width: 100%;
+  }
+
+  .sales__card {
+    gap: 50px;
+    min-height: 0;
+    justify-content: flex-start;
+  }
+
+  .sales__icon {
+    height: 75px;
+  }
+
+  .sales__card-body {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .sales__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sales__card,
+  .sales__card:nth-child(3),
+  .sales__card:nth-child(4),
+  .sales__card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .sales {
+    padding: 50px 0;
+    background-image: url("/images/sales-bg-mob.png");
+  }
+
+  h2.sales__title {
+    margin-bottom: 16px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .sales__lead {
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .sales__card-head {
+    margin-bottom: 20px;
+  }
+
+  .sales__plus {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+  }
+
+  .sales__card-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .sales__card-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sales__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sales__card,
+  .sales__card:nth-child(3),
+  .sales__card:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .sales__card:nth-child(5) {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: calc((100% - 20px) / 2);
+  }
+
+  .sales__card {
+    padding: 20px 20px 40px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  h2.sales__title {
+    text-align: left;
+  }
+
+  .sales__lead {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .sales__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .sales__card,
+  .sales__card:nth-child(5) {
+    grid-column: auto;
+    max-width: none;
+  }
+}

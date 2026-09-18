@@ -1,0 +1,254 @@
+/* Diploma — грамота серебряного партнёра Мегаплан */
+
+.diploma {
+  margin-bottom: var(--section-gap);
+  padding: 100px 0;
+}
+
+.diploma__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 48px;
+  min-height: 520px;
+  padding: 120px 100px 120px;
+  /* background-color: var(--color-near-black); */
+  background-image: url("/images/diploma-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: calc(var(--radius-section) / 2);
+  border: 2px solid #1B664F;
+
+  overflow: hidden;
+}
+
+.diploma__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 780px;
+}
+
+.diploma__logo {
+  display: block;
+  width: 265px;
+  height: auto;
+  margin-bottom: 54px;
+}
+
+.diploma__year {
+  margin: 0 0 18px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-white);
+}
+
+.diploma__title {
+  margin: 0 0 44px;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #1B664F;
+}
+
+.diploma__label {
+  margin: 0 0 18px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-white);
+}
+
+.diploma__name {
+  margin: 0 0 36px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--color-white);
+}
+
+.diploma__text {
+  margin: 0 0 66px;
+  font-size: 18px;
+  line-height: 1.1;
+  color: var(--color-white);
+}
+
+.diploma__sign {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.1;
+  color: var(--color-white);
+}
+
+.diploma__seal {
+  display: block;
+  align-self: end;
+  width: auto;
+  height: 200px;
+  object-fit: contain;
+  transform: rotate(15deg) translate(45px, 45px);
+}
+
+@media (max-width: 1439px) {
+  .diploma__inner {
+    min-height: 0;
+    padding: 48px 40px;
+  }
+
+  .diploma__title {
+    font-size: 28px;
+  }
+
+  .diploma__name {
+    font-size: 20px;
+  }
+
+  .diploma__seal {
+    width: 180px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1279px) {
+  .diploma__inner {
+    padding: 40px 32px;
+  }
+
+  .diploma__logo {
+    width: 160px;
+    margin-bottom: 20px;
+  }
+
+  .diploma__title {
+    font-size: 26px;
+  }
+
+  .diploma__seal {
+    width: 160px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .diploma {
+    margin-bottom: var(--section-gap);
+    padding: 20px 0 40px;
+  }
+
+  .diploma__inner {
+    position: relative;
+    display: block;
+    padding: 40px 24px 48px;
+    background-image: url("/images/diploma-bg-mob.png");
+    background-position: right top;
+  }
+
+  .diploma__content {
+    max-width: none;
+    min-height: 100%;
+  }
+
+  .diploma__logo {
+    width: 180px;
+    margin-bottom: 32px;
+  }
+
+  .diploma__year {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  .diploma__br {
+    display: none;
+  }
+
+  .diploma__title {
+    margin-bottom: 36px;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: left;
+  }
+
+  .diploma__label {
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+
+  .diploma__name {
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+
+  .diploma__text {
+    margin-bottom: 48px;
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .diploma__sign {
+    max-width: calc(100% - 140px);
+    margin-top: auto;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .diploma__seal {
+    position: absolute;
+    right: 8px;
+    bottom: 28px;
+    width: 128px;
+    height: auto;
+    transform: rotate(12deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .diploma__inner {
+    padding: 32px 24px;
+  }
+
+  .diploma__logo {
+    width: 98px;
+    margin-bottom: 20px;
+  }
+
+  .diploma__year {
+    margin-bottom: 6px;
+    font-size: 8px;
+  }
+
+  .diploma__title {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .diploma__label {
+    margin-bottom: 6px;
+    font-size: 8px;
+  }
+
+  .diploma__name {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .diploma__text {
+    margin-bottom: 28px;
+    font-size: 8px;
+  }
+  .diploma__sign {
+    font-size: 8px;
+  }
+  .diploma__seal {
+    right: 8px;
+    bottom: 7px;
+    width: 100px;
+    height: auto;
+  }
+}
