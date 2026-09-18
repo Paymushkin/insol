@@ -177,7 +177,7 @@
 
 .features__check .icon--check-circle path {
   fill: none;
-  stroke: #1b664f;
+  stroke: var(--color-green-deep);
 }
 
 .features--tree-2 .features__scheme {

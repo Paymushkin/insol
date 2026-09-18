@@ -16,6 +16,11 @@
   margin-bottom: 56px;
 }
 
+.clients__inner,
+.clients__about {
+  min-width: 0;
+}
+
 .clients__title {
   margin: 0 0 30px;
   font-size: 40px;
@@ -213,7 +218,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .clients {
     padding: 40px 0 80px;
     background-image: url("/images/clients-bg-mob.png");

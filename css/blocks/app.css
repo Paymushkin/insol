@@ -44,27 +44,11 @@
 }
 
 .app__headline {
-  /* position: absolute;
-  inset: 0;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  font-size: clamp(48px, 8vw, 110px);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.92);
-  filter: blur(8px);
-  pointer-events: none;
-  user-select: none; */
   position: absolute;
-  gap: clamp(24px, 2vw, 80px);;
-  font-family: "Proxima Nova", Inter;
+  gap: clamp(24px, 2vw, 80px);
+  font-family: Inter, sans-serif;
   font-size: clamp(48px, 7vw, 180px);
-  color: #FFF;
+  color: var(--color-white);
   line-height: 1;
   letter-spacing: 18px;
   text-transform: uppercase;

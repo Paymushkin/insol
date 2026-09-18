@@ -150,7 +150,7 @@
 }
 
 .footer__contact .icon--pin {
-  color: #878C93;
+  color: var(--color-gray-muted);
 }
 
 .footer__contact a {

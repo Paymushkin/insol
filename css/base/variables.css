@@ -5,10 +5,11 @@
   --color-green-primary: #1fb184;
   --color-green-accent: rgba(31, 177, 132, 0.5);
   --color-green-dark: #3c7161;
-  --color-green-deep: #1c6b51;
+  --color-green-deep: #1b664f;
   --color-green-glow: rgba(64, 190, 91, 0.3);
   --color-red-cta: #da4744;
   --color-red-dark: #462322;
+  --color-red-hover: #b83a38;
   --color-black: #222;
   --color-near-black: #010202;
   --color-dark-bg: #151515;
@@ -17,12 +18,14 @@
   --color-dark-gray: #3d4241;
   --color-gray-600: #616161;
   --color-gray-400: #90949a;
+  --color-gray-muted: #878c93;
   --color-gray-300: #a9aeb2;
   --color-gray-200: #c2c2c2;
   --color-gray-150: #cacaca;
   --color-gray-100: #d8d8d9;
   --color-gray-50: #dcdfe8;
   --color-bg-light: #ededed;
+  --color-bg-soft: #f0f1f3;
   --color-white: #ffffff;
   --color-text-dark: #222222;
   --color-text-body: #a9aeb2;
@@ -56,7 +59,7 @@
   --radius-s: 8px;
   --radius-m: 16px;
   --radius-l: 20px;
-  --radius-xl: 32px;
+  --radius-xl: 24px;
   --radius-section: 50px;
   --radius-pill: 50px;
   --radius-btn: 136px;

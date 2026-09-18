@@ -77,7 +77,7 @@
 }
 
 .description__tab.is-active {
-  background: #1b664f;
+  background: var(--color-green-deep);
   color: var(--color-white);
 }
 

@@ -1,5 +1,10 @@
 /* Field */
 
+.field {
+  display: block;
+  min-width: 0;
+}
+
 .field__control,
 .field__select,
 .field__textarea {

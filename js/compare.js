@@ -10,7 +10,7 @@
 
   const setComboPrice = (value) => {
     root.querySelectorAll('[data-compare-price="combo"]').forEach((node) => {
-      node.innerHTML = formatPrice(value);
+      node.textContent = formatPrice(value);
     });
   };
 

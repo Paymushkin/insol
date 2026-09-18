@@ -1,9 +1,10 @@
 (() => {
   const burger = document.querySelector('[data-burger]');
   const panel = document.querySelector('[data-burger-panel]');
-  const page = document.querySelector('.page');
   const header = document.querySelector('.header');
   if (!burger || !panel) return;
+
+  const syncLock = () => window.__insolPageLock?.sync();
 
   const syncHeader = () => {
     if (!header) return;
@@ -16,7 +17,7 @@
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
     panel.classList.toggle('is-open', open);
-    page.classList.toggle('is-locked', open);
+    syncLock();
     syncHeader();
   };
 

@@ -52,6 +52,15 @@
     return digits.length === 10 && !String(value).includes('_');
   }
 
+  function isEmailValid(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || '').trim());
+  }
+
+  function validateCaptcha(field) {
+    const expected = field.dataset.captchaAnswer || '11';
+    return String(field.value || '').trim() === String(expected);
+  }
+
   function validateForm(form) {
     let valid = true;
     const required = form.querySelectorAll('[required]');
@@ -64,6 +73,20 @@
       }
       if (field.hasAttribute('data-phone')) {
         if (!isPhoneComplete(field.value)) {
+          field.classList.add('is-error');
+          valid = false;
+        }
+        return;
+      }
+      if (field.type === 'email' || field.name === 'email') {
+        if (!isEmailValid(field.value)) {
+          field.classList.add('is-error');
+          valid = false;
+        }
+        return;
+      }
+      if (field.name === 'captcha') {
+        if (!validateCaptcha(field)) {
           field.classList.add('is-error');
           valid = false;
         }

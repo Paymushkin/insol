@@ -202,7 +202,7 @@
   gap: 6px;
   margin-bottom: 18px;
   padding: 4px;
-  border: 1px solid #dcdfe8;
+  border: 1px solid var(--color-gray-50);
   border-radius: 999px;
   background: transparent;
 }
@@ -260,7 +260,7 @@
   padding: 16px var(--compare-pad-x);
   border-radius: 999px;
   background: var(--color-white);
-  border: 1px solid #dcdfe8;
+  border: 1px solid var(--color-gray-50);
   font-size: var(--compare-fs-22);
   font-weight: 400;
   line-height: 1.2;
@@ -316,7 +316,7 @@
   font-size: var(--compare-fs-18);
   font-weight: 400;
   line-height: 1.2;
-  color: #a9aeb2;
+  color: var(--color-gray-300);
 }
 
 .compare-table__note:last-child {
@@ -368,7 +368,7 @@
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .compare-table {
     --compare-plan-min: 260px;
     --compare-plan-max: 280px;
@@ -552,7 +552,7 @@
     font-weight: 400;
     line-height: 1.2;
     background: var(--color-white);
-    border: 1px solid #dcdfe8;
+    border: 1px solid var(--color-gray-50);
   }
 
   .compare-card__value .compare-table__value--check {
@@ -588,7 +588,7 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 1.2;
-    color: #a9aeb2;
+    color: var(--color-gray-300);
   }
 
   .compare-card__note:last-child {

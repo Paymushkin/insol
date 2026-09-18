@@ -82,7 +82,7 @@
 
 .demo__note::after {
   height: 50%;
-  background: #1a634d;
+  background: var(--color-green-deep);
   box-shadow:
     0 0 2px 1px rgba(26, 99, 77, 0.45),
     0 4px 4px rgba(0, 0, 0, 0.25);

@@ -1,9 +1,7 @@
 (() => {
   const root = document.querySelector('[data-screenshots]');
-  if (!root) return;
+  if (!root || !window.__insolTabs) return;
 
-  const tabs = [...root.querySelectorAll('.screenshots__tab')];
-  const panels = [...root.querySelectorAll('.screenshots__panel')];
   const swipers = new Map();
 
   const createSwiper = (panel) => {
@@ -43,34 +41,16 @@
     }
   };
 
-  const activate = (id) => {
-    tabs.forEach((tab) => {
-      const active = tab.dataset.tab === id;
-      tab.classList.toggle('is-active', active);
-      tab.setAttribute('aria-selected', String(active));
-    });
-
-    let current = null;
-    panels.forEach((panel) => {
-      const active = panel.dataset.panel === id;
-      panel.classList.toggle('is-active', active);
-      panel.hidden = !active;
-      if (active) current = panel;
-    });
-
-    if (!current) return;
-
-    requestAnimationFrame(() => {
-      const swiper = createSwiper(current);
-      if (!swiper) return;
-      swiper.update();
-    });
-  };
-
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => activate(tab.dataset.tab));
+  window.__insolTabs.bind({
+    root,
+    tabSelector: '.screenshots__tab',
+    panelSelector: '.screenshots__panel',
+    onActivate(_id, panel) {
+      if (!panel) return;
+      requestAnimationFrame(() => {
+        const swiper = createSwiper(panel);
+        swiper?.update();
+      });
+    },
   });
-
-  const initial = panels.find((panel) => panel.classList.contains('is-active')) || panels[0];
-  if (initial) createSwiper(initial);
 })();

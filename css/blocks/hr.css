@@ -75,7 +75,7 @@ h2.hr__title {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .hr__card {
     padding: 30px;
   }
@@ -88,7 +88,7 @@ h2.hr__title {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   h2.hr__title {
     margin-bottom: 24px;
     text-align: center;

@@ -2,7 +2,7 @@
 
 .sales {
   --sales-card-bg: #121c19;
-  --sales-card-active: #1b664f;
+  --sales-card-active: var(--color-green-deep);
   position: relative;
   padding: 100px 0 234px;
   margin-bottom: 20px;
@@ -160,7 +160,7 @@ h2.sales__title {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .sales__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -213,7 +213,7 @@ h2.sales__title {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .sales__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

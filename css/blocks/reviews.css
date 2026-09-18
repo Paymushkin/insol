@@ -55,7 +55,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #1b664f;
+  background: var(--color-green-deep);
   color: var(--color-white);
   transition: background-color var(--ease), opacity var(--ease);
 }
@@ -140,7 +140,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  color: #a9aeb2;
+  color: var(--color-gray-300);
 }
 
 .reviews__company {
@@ -184,7 +184,7 @@
   font-weight: 700;
   line-height: 0.8;
   letter-spacing: 0;
-  color: #222;
+  color: var(--color-black);
 }
 
 @media (max-width: 1279px) {

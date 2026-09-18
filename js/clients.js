@@ -22,7 +22,7 @@
   const progress = sliderRoot && sliderRoot.querySelector("[data-clients-progress]");
   if (!sliderRoot || !slider || !list || typeof Swiper === "undefined") return;
 
-  const mq = window.matchMedia("(max-width: 1024px)");
+  const mq = window.matchMedia("(max-width: 1023px)");
   let swiper = null;
 
   const enable = () => {

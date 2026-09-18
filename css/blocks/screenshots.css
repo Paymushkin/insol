@@ -96,7 +96,7 @@
 }
 
 .screenshots__tab.is-active {
-  background: #1b664f;
+  background: var(--color-green-deep);
   color: var(--color-white);
 }
 
@@ -167,13 +167,13 @@
 
 .screenshots__prev {
   left: 0;
-  background: #e7f6ef;
+  background: var(--color-success-bg);
   color: var(--color-white);
 }
 
 .screenshots__next {
   right: 0;
-  background: #1b664f;
+  background: var(--color-green-deep);
   color: var(--color-white);
 }
 
